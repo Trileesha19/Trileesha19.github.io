@@ -1,0 +1,196 @@
+/* Resetting default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1e90ff, #ff6b6b);
+    color: #fefefe;
+    overflow-x: hidden;
+    animation: gradientAnimation 6s infinite alternate ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #1e90ff, #ff6b6b);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff6b6b, #1e90ff);
+    }
+}
+
+/* Header Section */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+   
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    
+}
+
+header nav ul li a:hover {
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fefefe;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #ff6b6b;
+    border-radius: 2px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Specific Section Designs */
+#home p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #fefefe;
+    animation: slideIn 1s ease-in;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Projects Section */
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+#projects ul li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#projects ul li:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: #ff6b6b;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#projects ul li a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Skills Section */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+#skills ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fefefe;
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
